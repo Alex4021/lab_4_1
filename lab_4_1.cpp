@@ -2,10 +2,36 @@
 //
 
 #include <iostream>
-using namespace std 
+#include <math.h>
+using namespace std;
 int main()
 {
-   
+	double x, y, z, f, pi;
+	x = 0.05;
+	y = 0.31;
+	z = 0.17;
+	pi = 3.14;
+	while (y <= 0.56)
+	{
+		f = (pi / 2) * x * z - (pi / 2) * pow(z, 2) + (pi / 2) * z * (pow(y, 2)) + (pi / 2) * pow(z, 3);
+		cout << "F=" << f;
+		cout << "y=" << y;
+		y = y + 0.11;
+
+	}
+	cout << "____________" << endl;
+	y = 1.6;
+	z = 3.666;
+	x = 0.12;
+	do
+	{
+		f = (pi / 2) * x * z - (pi / 2) * pow(z, 2) + (pi / 2) * z * pow(y, 2) + (pi / 2) * pow(z, 3);
+		cout << "F=" << f;
+		cout << "x=" << x;
+		x += 0.1;
+	} while (x <= 1.24);
+	system("pause");
+	return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
